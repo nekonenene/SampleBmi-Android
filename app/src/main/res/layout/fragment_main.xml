@@ -35,33 +35,49 @@
 	<EditText
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:inputType="number"
-		android:ems="6"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:ems="5"
+		android:maxLength="6"
 		android:id="@+id/heightField"
 		android:typeface="monospace"
+		android:paddingLeft="6sp"
+		android:paddingTop="4sp"
+		android:paddingBottom="8sp"
+		android:paddingRight="6sp"
+		android:numeric="integer|decimal"
+		android:layout_marginLeft="4sp"
+		android:layout_marginRight="2sp"
 		android:layout_alignBaseline="@+id/heightLabel"
 		android:layout_alignBottom="@+id/heightLabel"
-		android:layout_centerHorizontal="true"/>
+		android:layout_alignStart="@+id/button"
+		android:inputType="numberDecimal"/>
 
 	<EditText
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:inputType="number"
-		android:ems="6"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:ems="5"
+		android:maxLength="6"
 		android:id="@+id/weightField"
 		android:typeface="monospace"
-		android:layout_alignBaseline="@+id/weightUnitLabel"
-		android:layout_alignBottom="@+id/weightUnitLabel"
-		android:layout_toStartOf="@+id/heightUnitLabel"/>
+		android:paddingLeft="6sp"
+		android:paddingTop="4sp"
+		android:paddingRight="6sp"
+		android:paddingBottom="8sp"
+		android:numeric="integer|decimal"
+		android:layout_alignBaseline="@+id/weightLabel"
+		android:layout_alignBottom="@+id/weightLabel"
+		android:layout_toStartOf="@+id/heightUnitLabel"
+		android:inputType="numberDecimal"/>
 
 	<TextView
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:text="@string/height_unit"
-		android:layout_marginStart="21dp"
 		android:id="@+id/heightUnitLabel"
 		android:typeface="monospace"
+		android:layout_marginStart="13dp"
 		android:layout_alignTop="@+id/heightLabel"
 		android:layout_toEndOf="@+id/heightField"/>
 
@@ -83,7 +99,34 @@
 		android:layout_below="@+id/weightField"
 		android:layout_centerHorizontal="true"
 		android:layout_marginTop="68dp"
-		android:textSize="20dp"
-		android:padding="20dp"/>
+		android:textSize="20sp"
+		android:padding="20dp"
+		android:onClick="onCalcButton"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:text="BMI"
+		android:id="@+id/bmiLabel"
+		android:layout_marginTop="23dp"
+		android:textAlignment="center"
+		android:layout_below="@+id/button"
+		android:layout_alignParentStart="true"
+		android:layout_alignParentEnd="true"
+		android:textColor="@color/colorPrimaryDark"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:text="Comment"
+		android:id="@+id/commentLabel"
+		android:layout_below="@+id/bmiLabel"
+		android:layout_alignParentStart="true"
+		android:layout_marginTop="32dp"
+		android:layout_alignParentEnd="true"
+		android:textAlignment="center"
+		/>
 
 </RelativeLayout>
