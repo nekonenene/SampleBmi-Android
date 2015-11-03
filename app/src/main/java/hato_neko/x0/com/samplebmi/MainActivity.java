@@ -46,15 +46,26 @@ public class MainActivity extends AppCompatActivity
 		String heightValueString = heightField.getText().toString() ;
 		if(heightValueString.length() > 0)
 		{
-			Float heightCentiMeter = Float.parseFloat( heightValueString );
-			height = heightCentiMeter / 100;
-		}else{ return -1 ; }
-
+			try{
+				Float heightCentiMeter = Float.parseFloat( heightValueString );
+				height = heightCentiMeter / 100;
+			}
+			catch(Exception e) {
+				System.out.println(e) ;
+						return -1 ;
+			}
+		}else{ height = 0f ; }
 		EditText weightField = (EditText)findViewById(R.id.weightField) ;
 		String weightValueString = weightField.getText().toString() ;
 		if(weightValueString.length() > 0)
 		{
-			weight = Float.parseFloat( weightValueString );
+			try{
+				weight = Float.parseFloat( weightValueString );
+			}
+			catch(Exception e) {
+				System.out.println(e) ;
+				return -1 ;
+			}
 		}else{ return -1 ; }
 
 		if(height == 0)
