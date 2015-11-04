@@ -1,11 +1,13 @@
 package hato_neko.x0.com.samplebmi;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -40,6 +42,12 @@ public class MainActivity extends AppCompatActivity
 
 	public int onCalcButton(View button)
 	{
+		// キーボードをしまう
+		InputMethodManager keyboard = (InputMethodManager)getSystemService( Context
+																					.INPUT_METHOD_SERVICE ) ;
+		keyboard.hideSoftInputFromWindow( button.getWindowToken(), InputMethodManager
+																		   .HIDE_NOT_ALWAYS ) ;
+
 		Float height = 0f ;
 		Float weight = 0f ;
 		EditText heightField = (EditText)findViewById(R.id.heightField) ;
