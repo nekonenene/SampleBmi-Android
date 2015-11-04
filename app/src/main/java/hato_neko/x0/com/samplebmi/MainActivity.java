@@ -89,15 +89,15 @@ public class MainActivity extends AppCompatActivity
 
 		TextView commentLabel = (TextView)findViewById(R.id.commentLabel) ;
 		if(bmi < 17.6){
-			commentLabel.setText( "やせすぎです。\nもっと食べましょう。" ) ;
+			commentLabel.setText( "やせすぎです\nもっと食べましょう" ) ;
 		}else if(bmi < 19.8){
-			commentLabel.setText( "やせ気味ですが、まあ、いい感じですね。" ) ;
+			commentLabel.setText( "やせ気味ですが、まあ、いい感じですね" ) ;
 		}else if(bmi < 24.2){
-			commentLabel.setText( "健康的なBMIです。\nいいっすね〜" ) ;
+			commentLabel.setText( "健康的なBMIです\nいいっすね〜" ) ;
 		}else if(bmi < 26.4){
-			commentLabel.setText( "太り気味ですね。\nけっこうまずいので、体を動かしましょう。" ) ;
+			commentLabel.setText( "太り気味ですね\nけっこうまずいので、体を動かしましょう" ) ;
 		}else if(bmi >= 26.4){
-			commentLabel.setText( "やばいです。やばい。" ) ;
+			commentLabel.setText( "やばいです。やばい" ) ;
 		}else{
 			commentLabel.setText( "ERROR" ) ;
 		}
